@@ -8,8 +8,6 @@ class Post(models.Model):
         verbose_name_plural = "Posts"
     post_title = models.CharField(max_length=200)
     text = models.TextField()
-    #how to use get_user_model in django
-    #author = models.get_user_model()
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     created_date =  models.DateTimeField()
     published_date =  models.DateTimeField()
